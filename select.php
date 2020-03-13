@@ -19,7 +19,7 @@ if($status==false){
   exit("ErrorQuery:".$error[2]);
 }else{
   //Selectデータの数だけ自動でループしてくれる $resultの中に「カラム名」が入ってくるのでそれを表示させる例
-  while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
+  while( $result = $stmt->fetch(PDO::FETCH_ASSOC) ){
     $view .= "<p>";
     $view .= "NAME : ".$result["name"]."<br>"."<img src='upload/".$result["image"]."'>"  ."COMMENTS"."<br>"."<span2>".$result["comments"]."</span2>"."<a href='".$result["shop"]."'>👉visit the website</a>"."<span>".$result["indate"]."</span>";
     $view .= "</p>";
